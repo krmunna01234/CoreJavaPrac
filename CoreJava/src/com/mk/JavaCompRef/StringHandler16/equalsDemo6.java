@@ -28,7 +28,11 @@ class equalsDemo6 {
 		System.out.println(s5 + " == " + s6 + " -> " + s5==s6);
 		System.out.println(s1 + " == " + s6 + " -> " + s1==s6);
 		System.out.println(s7 + " == " + s6 + " -> " + s7==s6);
-
-
+		
+		System.out.println("Intern Impl");
+		System.out.println(s1 + " == " + s5 + " -> " + s1==s5);
+		System.out.println(s1 + " == " + s5 + " with intern-> " + s1==s5.intern());
+		s5 = s5.intern();
+		System.out.println(s1 + " == " + s5 + " After intern-> " + s1==s5);
 	}
 }

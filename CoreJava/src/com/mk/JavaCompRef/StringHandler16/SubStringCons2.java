@@ -16,9 +16,9 @@ class SubStringCons2 {
 		String str= new String("quick brown fox jumps over the lazy dog");
 	       System.out.println("Substring starting from index 3:");
 	       System.out.println(str.substring(3));
-	       System.out.println("Substring starting from index 3:");
-	       System.out.println(str.substring(3));
 	       System.out.println("Substring starting from index 15 and ending at 20:");
-	       System.out.println(str.substring(3, 5));
+	       System.out.println(str.substring(3, 7));
+	       System.out.println("Substring starting from index 50:");
+	       System.out.println(str.substring(50));
 	}
 }
