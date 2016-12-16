@@ -1,5 +1,11 @@
 package com.mk.Tview;
 
+/*
+ * To find the each words occurrence from a file by using efficient way to read the file.
+ * 
+ * 
+ */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
