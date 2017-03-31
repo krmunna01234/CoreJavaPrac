@@ -2,18 +2,30 @@ package com.mk.general;
 
 import java.util.*;
 
-
-
 public class CollectionTest {
 
 	public static void main(String as[]) {
 
-		System.out
-				.println("**********************************List**********************************");
-		System.out
-				.println("**********************************List**********************************");
-		System.out
-				.println("=============================ArrayList==================================");
+		
+		
+		
+		System.out.println("**********************************List**********************************");
+		System.out.println("**********************************List**********************************");
+		System.out.println("=============================ArrayList==================================");
+		
+		System.out.println("Vector Example: ");
+		List<String> vc = new Vector<String>();
+		vc.add("Ram");
+		vc.add("Shyam");
+		vc.add("Mohan");
+		vc.add("Shyam");
+		
+		Iterator<String> itr = vc.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
+		
+		System.out.println("=============================ArrayList==================================");
 		System.out.println("ArrayList Example: ");
 		List<String> al = new ArrayList<String>();
 		al.add("Ram");
@@ -21,8 +33,7 @@ public class CollectionTest {
 		al.add("Mohan");
 		al.add("Shyam");
 
-		System.out
-				.println("Inserted value : Ram, Shyam, Mohan, Shyam in ArrayList");
+		System.out.println("Inserted value : Ram, Shyam, Mohan, Shyam in ArrayList");
 		System.out.println("ArrayList#1 normal for loop");
 		for (int i = 0; i < al.size(); i++) {
 			System.out.println(al.get(i));
@@ -46,20 +57,18 @@ public class CollectionTest {
 			System.out.println(iterator.next());
 		}
 		System.out.println("ArrayList#5 iterator");
-		for (Iterator<String> iterator1 = al.iterator(); iterator1.hasNext(); /* */) {
+		for (Iterator<String> iterator1 = al.iterator(); iterator1.hasNext(); ) {
 			String value = iterator1.next();
 			System.out.println(value);
 		}
-		System.out
-				.println("ArrayList#6  iterator concurrentModification exception");
+		System.out.println("ArrayList#6  iterator concurrentModification exception");
 		Iterator<String> itttr = al.iterator();
 		while (itttr.hasNext()) {
 			System.out.println(itttr.next());
 
 		}
 
-		System.out
-				.println("=============================LinkedList==================================");
+		System.out.println("=============================LinkedList==================================");
 		System.out.println("LinkedList Example: ");
 		List<String> lList = new LinkedList<String>();
 		lList.add("Ram");
@@ -67,8 +76,7 @@ public class CollectionTest {
 		lList.add("Mohan");
 		lList.add("Shyam");
 
-		System.out
-				.println("Inserted value : Ram, Shyam, Mohan, Shyam in LinkedList");
+		System.out.println("Inserted value : Ram, Shyam, Mohan, Shyam in LinkedList");
 		System.out.println("LinkedList#1 normal for loop");
 		for (int i = 0; i < lList.size(); i++) {
 			System.out.println(al.get(i));
@@ -94,12 +102,9 @@ public class CollectionTest {
 
 		List<String> vec = new Vector<String>();
 
-		System.out
-				.println("**********************************Set**********************************");
-		System.out
-				.println("**********************************Set**********************************");
-		System.out
-				.println("=============================HashList==================================");
+		System.out.println("**********************************Set**********************************");
+		System.out.println("**********************************Set**********************************");
+		System.out.println("=============================HashSet==================================");
 		System.out.println("HashSet Example: ");
 		Set<String> hs = new HashSet<String>();
 		hs.add("Ram");
@@ -108,8 +113,7 @@ public class CollectionTest {
 		hs.add("Shyam"); // not giving any error because of duplicate but it is
 							// not inserting into Set collection
 
-		System.out
-				.println("Inserted value : Ram, Shyam, Mohan, Shyam in HashSet");
+		System.out.println("Inserted value : Ram, Shyam, Mohan, Shyam in HashSet");
 		/*
 		 * System.out.println("HashSet#1 normal for loop"); for (int i = 0; i <
 		 * hs.size(); i++) { System.out.println(hs.get(i)); }
@@ -131,6 +135,7 @@ public class CollectionTest {
 			System.out.println(itrt.next());
 		}
 
+		System.out.println("=============================LinkedHashSet==================================");
 		System.out.println("LinkedHashSet Example: ");
 		Set<String> lHS = new LinkedHashSet<String>();
 		lHS.add("Ram");
@@ -139,8 +144,7 @@ public class CollectionTest {
 		lHS.add("Shyam"); // not giving any error because of duplicate but it is
 							// not inserting into Set collection
 
-		System.out
-				.println("Inserted value : Ram, Shyam, Mohan, Shyam in LinkedHashSet");
+		System.out.println("Inserted value : Ram, Shyam, Mohan, Shyam in LinkedHashSet");
 
 		System.out.println("LinkedHashSet#2 advance for loop");
 		for (String temp : lHS) {
@@ -153,16 +157,15 @@ public class CollectionTest {
 			System.out.println(itrtr.next());
 		}
 
+		System.out.println("=============================LinkedHashSet==================================");
 		System.out.println("TreeSet Example: ");
 		Set<String> tS = new TreeSet<String>();
 		tS.add("Ram");
 		tS.add("Shyam");
 		tS.add("Mohan");
-		tS.add("Shyam"); // not giving any error because of duplicate but it is
-							// not inserting into Set collection
+		tS.add("Shyam"); 
 
-		System.out
-				.println("Inserted value : Ram, Shyam, Mohan, Shyam in TreeSet");
+		System.out.println("Inserted value : Ram, Shyam, Mohan, Shyam in TreeSet");
 
 		System.out.println("TreeSet#2 advance for loop");
 		for (String temp : tS) {
@@ -175,12 +178,9 @@ public class CollectionTest {
 			System.out.println(itrtor.next());
 		}
 
-		System.out
-				.println("**********************************MAP**********************************");
-		System.out
-				.println("**********************************Map**********************************");
-		System.out
-				.println("==============================HashMap==================================");
+		System.out.println("**********************************MAP**********************************");
+		System.out.println("**********************************Map**********************************");
+		System.out.println("==============================HashMap==================================");
 		System.out.println("HashMap Example: ");
 		Map<Integer, String> hm = new HashMap<Integer, String>();
 
@@ -208,8 +208,7 @@ public class CollectionTest {
 		Iterator<Map.Entry<Integer, String>> itr1 = hm.entrySet().iterator();
 		while (itr1.hasNext()) {
 			Map.Entry<Integer, String> entry = itr1.next();
-			System.out.println("Key:" + entry.getKey() + "  Value:"
-					+ entry.getValue());
+			System.out.println("Key:" + entry.getKey() + "  Value:" + entry.getValue());
 		}
 
 		System.out.println("HashMap#2 advance for loop with Iterator, while");
@@ -221,8 +220,7 @@ public class CollectionTest {
 
 		Map<Employee, String> m = new HashMap<Employee, String>();
 
-		System.out
-				.println("==============================HashTable==================================");
+		System.out.println("==============================HashTable==================================");
 		Hashtable<Integer, String> ht = new Hashtable<Integer, String>();
 		ht.put(1, "Ram");
 		ht.put(4, "Ram");
@@ -244,21 +242,19 @@ public class CollectionTest {
 
 		System.out.println("HashMap#3 advance for loop with Iterator, while");
 		Iterator<Map.Entry<Integer, String>> itr3 = ht.entrySet().iterator();
-		while (itr1.hasNext()) {
+		while (itr3.hasNext()) {
 			Map.Entry<Integer, String> entry = itr3.next();
-			System.out.println("Key:" + entry.getKey() + "  Value:"
-					+ entry.getValue());
+			System.out.println("Key:" + entry.getKey() + "  Value:" + entry.getValue());
 		}
 
 		System.out.println("HashMap#2 advance for loop with Iterator, while");
 		Iterator<Integer> itr4 = ht.keySet().iterator();
 		while (itr4.hasNext()) {
-			Integer key = itr2.next();
+			Integer key = itr4.next();
 			System.out.println("Key:" + key + "  Value:" + ht.get(key));
 		}
 
-		System.out
-				.println("==============================TreeMap==================================");
+		System.out.println("==============================TreeMap==================================");
 		Map<Integer, String> mt = new TreeMap<Integer, String>();
 
 		mt.put(5, "Hello");
@@ -271,8 +267,7 @@ public class CollectionTest {
 		Iterator<Map.Entry<Integer, String>> itr5 = mt.entrySet().iterator();
 		while (itr5.hasNext()) {
 			Map.Entry<Integer, String> entry = itr5.next();
-			System.out.println("Key:" + entry.getKey() + "  Value:"
-					+ entry.getValue());
+			System.out.println("Key:" + entry.getKey() + "  Value:" + entry.getValue());
 		}
 
 		System.gc();

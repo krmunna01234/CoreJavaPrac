@@ -21,7 +21,7 @@ public class WordsOccurrenceInFile {
 
 	public static void main(String[] args) {
 
-		String fileName = "C:\\MyImp\\Workspace_New\\git\\test.txt";
+		String fileName = "C:\\MyImp\\Workspace\\test.txt";
 		// StringInFile(fileName);
 		ArrayList<String> listOfWord = StringInFile(fileName);
 
@@ -46,7 +46,7 @@ public class WordsOccurrenceInFile {
 		BufferedWriter bwr = null;
 		try {
 			
-			bwr = new BufferedWriter(new FileWriter("C:\\MyImp\\Workspace_New\\git\\test1.txt"));
+			bwr = new BufferedWriter(new FileWriter("C:\\MyImp\\Workspace\\test1.txt"));
 			bwr.write(hm.toString());
 			
 
