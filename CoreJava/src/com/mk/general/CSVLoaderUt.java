@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
+//
 public class CSVLoaderUt {
 
 	private static String JDBC_CONNECTION_URL = "jdbc:oracle:thin:SCOTT/TIGER@localhost:1500:MyDB";
